@@ -13,10 +13,12 @@ module cooler(){
     color([1,0.5,0.2])
     xycube([cooler_interface_x, cooler_interface_y, cooler_interface_z]);
     
-    
     //Threaded body of screws
     color([0.5, 0.5,0.5])
     cooler_hole_pattern(cooler_thread_radius, 10);
 }
 
-cooler();
+module translate_to_cooler(){
+	translate([0, 0, cooler_interface_z]) children();
+}
+
