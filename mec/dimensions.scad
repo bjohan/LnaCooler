@@ -54,7 +54,31 @@ aluminium_spacer_top_x = tec4_24606_l4_x;
 aluminium_spacer_top_y = tec4_24606_l4_y;
 aluminium_spacer_top_z = 20;
 
+//Extra sides at base
 aluminium_side_length = cooler_hole_pattern_x_sep + 20;
 aluminium_side_x = (aluminium_side_length-copper_base_x)/2;
 aluminium_side_y = aluminium_side_length;
 aluminium_side_z = copper_base_z;
+aluminium_side_screw_radius = 3/2;
+
+//Main shrouhd dimensions
+base_shroud_top_thickness = 5;
+base_shroud_wall_thickness = 5;
+base_shroud_x = aluminium_side_length+2*base_shroud_wall_thickness;
+base_shroud_y = base_shroud_x; //aluminium_side_length+2*base_shroud_wall_thickness;
+base_shroud_z = aluminium_side_z+tec1_12710_z+copper_heat_spreader_z+base_shroud_top_thickness;
+
+//Cryochamber dimensions
+wall_length = base_shroud_x;
+wall_height = 100;
+wall_thickness = 5;
+wall_screw_radius = 3/2;
+wall_screw_depth = 20;
+
+
+peltier_clamp_flange_length = 20;
+peltier_clamp_wall_thickness = 5;
+peltier_clamp_x = tec1_12710_x+peltier_clamp_wall_thickness+2*peltier_clamp_flange_length;
+peltier_clamp_y = tec1_12710_y+peltier_clamp_wall_thickness;
+peltier_clamp_z = tec1_12710_z+peltier_clamp_wall_thickness*2;
+peltier_clamp_screw_radius = 3/2;

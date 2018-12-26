@@ -14,7 +14,6 @@ module copper_heat_spreader(){
 	xycube([copper_heat_spreader_x, copper_heat_spreader_y, copper_heat_spreader_z]);
 }
 
-
 module translate_to_copper_heat_spreader(){
 	translate([0, 0, copper_heat_spreader_z]) children();
 }
@@ -27,7 +26,6 @@ module aluminium_spacer(){
 module translate_to_aluminium_spacer(){
 	translate([0, 0, aluminium_spacer_z]) children();
 }
-
 
 module aluminium_spacer_top(){
 	color([0.7, 0.7, 0.7])
