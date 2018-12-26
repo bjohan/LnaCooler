@@ -33,6 +33,7 @@ module base_shroud(){
 		}
 		base_assembly_holes();
 		peltier_clamp_hole_pattern();
+		heat_spreder_tensioning_hole_pattern();
 	}
 }
 
@@ -72,6 +73,13 @@ module peltier_clamp_hole_pattern(){
 	translate([peltier_clamp_x/2-peltier_clamp_flange_length/2,0,0])
 		cylinder(100, peltier_clamp_screw_radius,peltier_clamp_screw_radius);
 	translate([-(peltier_clamp_x/2-peltier_clamp_flange_length/2),0,0])
+		cylinder(100, peltier_clamp_screw_radius,peltier_clamp_screw_radius);
+}
+
+module heat_spreder_tensioning_hole_pattern(){
+	translate([0, peltier_clamp_x/2-peltier_clamp_flange_length/2,0])
+		cylinder(100, peltier_clamp_screw_radius,peltier_clamp_screw_radius);
+	translate([0, -(peltier_clamp_x/2-peltier_clamp_flange_length/2),0])
 		cylinder(100, peltier_clamp_screw_radius,peltier_clamp_screw_radius);
 }
 
